@@ -1,5 +1,6 @@
 MetaMorph concatenates the morphology context features $c^i$ with state features $s^i_t$ as the input to node $i$, so the node embedding is computed as $e^i = W \left[ s^i_t; c^i \right] + b = W_s s^i_t + W_c c^i + b$, where $W_s$ and $W_c$ are the sub-matrices that encode state $s^i_t$ and context features $c^i$ respectively.
-As $c^i$ is fixed, this is equivalent to adding a context-conditioned bias term $W_c c^i$ to $e^i$. 
+As $c^i$ is fixed, this is equivalent to adding a context-conditioned bias term $W_c c^i$ to $e^i$.  
+(Sorry that the equation seems not properly displayed in this anonymous link)
 
 As the reviewer suggested, this additional bias term could in principle enable further computation and node interaction to condition on the morphology in flexible ways. 
 However, empirically it may not be the optimal way to do so. 
