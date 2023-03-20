@@ -7,4 +7,5 @@ Empirically, SWAT is developed in a codebase different from MetaMorph and evalua
 Instead, we tried to reproduce SWAT PE in our codebase, and found it to be not helpful, possibly because the much larger number of robots used in the UNIMAL benchmark amplifies SWAT PE's inconsistency issue.
 
 For RE, the key difference between RE and our method is that our method computes fixed attention weights conditioned on morphlogy context *alone*, while SWAT first computes dynamic attention weights based on node embedding, then adds RE as an additional term to adjust the attention map. 
-Empirically, the ablation in SWAT paper shows that using RE alone only provides a little performance gain, while the fixed attention module in our method significantly improves learning performance, possibly due to the more proper inductive bias of conditioning the attention map on morphology alone. 
+Empirically, the ablation in SWAT paper shows that using RE alone only provides a little performance gain. We also tried to reproduce RE in our codebase by adding it to MetaMorph, but found that there is little difference in training performance. 
+In contrast, the fixed attention module in our method significantly improves learning performance, possibly due to the more proper inductive bias of conditioning the attention map on morphology alone. 
